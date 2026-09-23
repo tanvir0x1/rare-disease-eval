@@ -1,0 +1,13 @@
+{
+  "BEST_RRF": {
+    "weights": [
+      0.0,
+      3.0,
+      2.0
+    ],
+    "k": 10
+  },
+  "RETRIEVER": "hybrid_tuned",
+  "objective": "mean R@25 over tiers, tie-break R@5",
+  "n_dev_diseases": 60
+}

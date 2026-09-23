@@ -1,0 +1,13 @@
+tier,signal,AURC
+T0,Kendall disagreement,0.8704
+T0,Top-5 Jaccard disagreement,0.8805
+T0,random abstention,0.8147
+T1,Kendall disagreement,0.6019
+T1,Top-5 Jaccard disagreement,0.6709
+T1,random abstention,0.6334
+T2,Kendall disagreement,0.743
+T2,Top-5 Jaccard disagreement,0.7909
+T2,random abstention,0.7326
+T3,Kendall disagreement,0.537
+T3,Top-5 Jaccard disagreement,0.5716
+T3,random abstention,0.4304

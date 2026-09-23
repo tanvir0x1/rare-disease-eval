@@ -1,0 +1,45 @@
+{
+  "seed": 42,
+  "python": "3.12.13",
+  "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+  "torch": "2.10.0+cu128",
+  "transformers": "5.16.1",
+  "sentence_transformers": "6.0.0",
+  "hpo_source_url": "restored from cached hp.obo via K0e; not downloaded this session. Original file came from the v4 master fetch. The release actually used is given by hpo_data_version.",
+  "hpo_pinned_tag_requested": "v2023-06-06",
+  "hpo_data_version": "hp/releases/2026-06-23",
+  "hpo_sha256": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+  "kb_n_diseases": 4289,
+  "medgemma_source": "google/medgemma-27b-text-it",
+  "medgemma_quant": "4-bit NF4, double quant",
+  "medgemma_compute_dtype": "fp32",
+  "ensemble_internal": [
+    "google/medgemma-27b-text-it",
+    "gemini-3.5-flash-lite",
+    "mistral-small-latest"
+  ],
+  "ensemble_external": [
+    "google/medgemma-27b-text-it",
+    "mistral-small-latest"
+  ],
+  "ext_retriever": "hybrid",
+  "ext_retriever_choice": "POST-HOC, externally informed \u2014 declare in the paper",
+  "best_rrf": {
+    "weights": [
+      0.0,
+      3.0,
+      2.0
+    ],
+    "k": 10
+  },
+  "top_k_retrieve": 25,
+  "local_batch_final": 2,
+  "local_max_new_tokens": 140,
+  "alpha": 0.05,
+  "corrections": [
+    "holm",
+    "fdr_bh"
+  ],
+  "baselines_are_reimplementations": true,
+  "anc_discount_lirical_style": 0.5
+}

@@ -1,0 +1,13 @@
+tier,model_a,model_b,mean_disagreement
+T0,medgemma-27b-text-it,gemini-3.5-flash-lite,0.2853
+T0,medgemma-27b-text-it,mistral-small-latest,0.2812
+T0,gemini-3.5-flash-lite,mistral-small-latest,0.3018
+T1,medgemma-27b-text-it,gemini-3.5-flash-lite,0.2943
+T1,medgemma-27b-text-it,mistral-small-latest,0.2784
+T1,gemini-3.5-flash-lite,mistral-small-latest,0.3035
+T2,medgemma-27b-text-it,gemini-3.5-flash-lite,0.3321
+T2,medgemma-27b-text-it,mistral-small-latest,0.2882
+T2,gemini-3.5-flash-lite,mistral-small-latest,0.3428
+T3,medgemma-27b-text-it,gemini-3.5-flash-lite,0.3165
+T3,medgemma-27b-text-it,mistral-small-latest,0.2943
+T3,gemini-3.5-flash-lite,mistral-small-latest,0.3161

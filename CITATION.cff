@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or these artefacts, please cite the paper and the archived release."
+title: "Zero-cost retrieval-augmented rare disease diagnosis: code and artefacts"
+abstract: >-
+  Code, prompts, archived model responses and result tables for a study showing that a
+  benchmark built by sampling a disease's own annotations reverses the measured value of
+  large language model re-ranking, of the retriever, and of fusion tuning.
+version: "1.0.0"
+date-released: "2026-09-23"
+license: MIT
+repository-code: "https://github.com/USERNAME/rare-disease-eval"
+doi: "10.5281/zenodo.XXXXXXX"
+keywords:
+  - rare disease diagnosis
+  - Human Phenotype Ontology
+  - Orphanet
+  - retrieval augmented generation
+  - benchmark construction
+  - external validation
+authors:
+  - family-names: Amin
+    given-names: "Md Obaidul"
+    affiliation: "International Islamic University Chittagong"
+  - family-names: Karmakar
+    given-names: Dipta
+    affiliation: "International Islamic University Chittagong"
+  - family-names: Shawon
+    given-names: "Shayeb Ahammed"
+    affiliation: "International Islamic University Chittagong"
+  - family-names: Ahsan
+    given-names: Tanveer
+    affiliation: "International Islamic University Chittagong"

@@ -1,0 +1,19 @@
+# data and model weights are not redistributed
+data/raw/
+*.pkl
+*.obo
+*.zip
+
+# secrets
+.env
+*.key
+kaggle.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# os
+.DS_Store

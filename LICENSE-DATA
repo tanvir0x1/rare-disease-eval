@@ -1,0 +1,15 @@
+Data, tables, prompts and archived model outputs in this repository
+(everything under results/, prompts/, runs/ and figures/) are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made.
+
+NOT COVERED BY THIS LICENCE
+This repository does not redistribute Orphanet, the Human Phenotype Ontology,
+SapBERT, RareBench or the MedGemma weights. Those remain under the terms of their
+respective providers; see data/README.md.

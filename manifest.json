@@ -1,0 +1,165 @@
+{
+  "paper": {
+    "title": "Zero-cost retrieval-augmented rare disease diagnosis: how benchmark construction inverts the measured value of large language model re-ranking",
+    "repository": "https://github.com/USERNAME/rare-disease-eval",
+    "archived_doi": "10.5281/zenodo.XXXXXXX"
+  },
+  "git_commit": "FILL IN: sha of the commit that produced these results",
+  "run_dates_utc": {
+    "internal_arm": "2026-06-29",
+    "external_arm": "2026-06-29",
+    "note": "Run date as recorded in the thesis provenance appendix. Replace with the exact per-arm dates if they differ."
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.16.1",
+    "sentence_transformers": "6.0.0",
+    "bitsandbytes": "0.50.1",
+    "accelerate": "1.14.0",
+    "gpus": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "compute_capability": "sm_75"
+  },
+  "seeds": {
+    "global": 42
+  },
+  "data_sources": {
+    "hpo": {
+      "file": "hp.obo",
+      "data_version": "hp/releases/2026-06-23",
+      "sha256": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+      "active_terms": 19836,
+      "alternate_ids": 3964,
+      "note": "RareBench was curated against the 2023-06-06 release; this mismatch is declared in the paper."
+    },
+    "orphanet": {
+      "file": "en_product4.csv",
+      "rows": 115878,
+      "release": "FILL IN: Orphadata release date of the file used",
+      "sha256": "FILL IN"
+    },
+    "rarebench": {
+      "file": "data.zip",
+      "subsets_used": [
+        "RAMEDIS",
+        "MME",
+        "HMS",
+        "LIRICAL"
+      ],
+      "subsets_excluded": [
+        "PUMCH_ADM"
+      ],
+      "disease_mapping_entries": 11150,
+      "source": "FILL IN: RareBench repository URL and commit sha",
+      "sha256": "FILL IN"
+    },
+    "sapbert": {
+      "model": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+      "revision": "FILL IN: Hugging Face commit sha"
+    }
+  },
+  "knowledge_base": {
+    "n_disorders": 4289,
+    "n_annotations": 115878
+  },
+  "models": {
+    "local": {
+      "id": "google/medgemma-27b-text-it",
+      "revision": "FILL IN: Hugging Face commit sha",
+      "access": "gated under the HAI-DEF terms",
+      "quantization": "4-bit NF4, double_quant=True",
+      "compute_dtype": "float16",
+      "attn_implementation": "eager",
+      "decoding": "do_sample=False, num_beams=1 (greedy, deterministic)",
+      "max_new_tokens": {
+        "internal": 200,
+        "external": 140
+      },
+      "device_map": "auto across both GPUs, CPU budget 0 GiB",
+      "note": "Not numerically identical to the released bfloat16 checkpoint. Attribute results to this quantised artefact."
+    },
+    "api_aliases": [
+      {
+        "alias": "gemini-3.5-flash-lite",
+        "provider": "Google AI Studio (free tier)",
+        "arms": [
+          "internal"
+        ],
+        "run_dates_utc": [
+          "2026-06-29"
+        ],
+        "note": "Absent from the external arm: the free tier caps at 500 requests per day and the external arm needs 834."
+      },
+      {
+        "alias": "mistral-small-latest",
+        "provider": "Mistral (free tier)",
+        "arms": [
+          "internal",
+          "external"
+        ],
+        "run_dates_utc": [
+          "2026-06-29"
+        ]
+      }
+    ],
+    "alias_caveat": "Provider aliases can be repointed to different weights without notice, so these two slots are reproducible only relative to the run dates above. All raw responses are archived under runs/ and every table can be recomputed from them with --replay."
+  },
+  "evaluation": {
+    "internal": {
+      "eval_diseases": 100,
+      "dev_diseases": 60,
+      "tiers": [
+        "T0",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "queries_per_model": 400
+    },
+    "external": {
+      "cases": 834,
+      "coverage_after_mapping_pct": 74.3
+    },
+    "candidate_list_size": 25,
+    "retriever_internal": "hybrid_tuned",
+    "retriever_external_rerank": {
+      "value": "hybrid",
+      "selection": "post-hoc, externally informed; declared in the paper"
+    },
+    "fusion": {
+      "w_dense": 0.0,
+      "w_bm25": 3.0,
+      "w_ic": 2.0,
+      "k": 10,
+      "grid_configurations_scored": 228,
+      "objective": "mean R@25 over tiers, tie-break R@5"
+    },
+    "lirical_style_ancestor_discount": 0.5
+  },
+  "statistics": {
+    "alpha": 0.05,
+    "corrections": [
+      "holm",
+      "fdr_bh"
+    ],
+    "n_tests": 47,
+    "families": [
+      "internal retrieval",
+      "internal re-ranking",
+      "external retrieval",
+      "external re-ranking"
+    ],
+    "test": "exact McNemar, paired"
+  },
+  "usage": {
+    "internal_calls": 1200,
+    "external_calls": 1668,
+    "parse_failures": 0,
+    "monetary_cost_usd": 0
+  },
+  "baselines_are_reimplementations": true
+}

@@ -1,0 +1,18 @@
+# Exact versions used for the reported runs (Python 3.12.13).
+# Regenerate from your own environment with: pip freeze > requirements.txt
+torch==2.10.0
+transformers==5.16.1
+sentence-transformers==6.0.0
+bitsandbytes==0.50.1
+accelerate==1.14.0
+# --- add the rest from `pip freeze`; the ones below are placeholders to replace ---
+# numpy==
+# scipy==
+# pandas==
+# scikit-learn==
+# rank-bm25==
+# obonet==   or   pronto==
+# statsmodels==
+# matplotlib==
+# google-genai==
+# mistralai==

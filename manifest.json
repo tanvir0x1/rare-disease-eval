@@ -1,7 +1,7 @@
 {
   "paper": {
     "title": "Zero-cost retrieval-augmented rare disease diagnosis: how benchmark construction inverts the measured value of large language model re-ranking",
-    "repository": "https://github.com/USERNAME/rare-disease-eval",
+    "repository": "https://github.com/tanvir0x1/rare-disease-eval",
     "archived_doi": "10.5281/zenodo.XXXXXXX"
   },
   "git_commit": "FILL IN: sha of the commit that produced these results",

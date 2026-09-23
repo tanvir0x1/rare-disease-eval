@@ -1,0 +1,12 @@
+Patient phenotypic features:
+- <feature 1>
+- <feature 2>
+...
+
+Candidate diseases:
+1. <disease name 1>
+2. <disease name 2>
+...
+25. <disease name 25>
+
+Return JSON only: {"ranking": [<all 25 numbers, most likely first>]}

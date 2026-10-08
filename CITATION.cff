@@ -8,8 +8,8 @@ abstract: >-
 version: "1.0.0"
 date-released: "2026-09-23"
 license: MIT
-repository-code: "https://github.com/USERNAME/rare-disease-eval"
-doi: "10.5281/zenodo.XXXXXXX"
+repository-code: "https://github.com/tanvir0x1/rare-disease-eval"
+doi: "10.5281/zenodo.22922908"
 keywords:
   - rare disease diagnosis
   - Human Phenotype Ontology

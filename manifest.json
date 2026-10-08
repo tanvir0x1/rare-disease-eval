@@ -8,7 +8,6 @@
   "run_dates_utc": {
     "internal_arm": "2026-06-29",
     "external_arm": "2026-06-29",
-    "note": "Run date as recorded in the thesis provenance appendix. Replace with the exact per-arm dates if they differ."
   },
   "environment": {
     "python": "3.12.13",
@@ -34,7 +33,7 @@
       "sha256": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
       "active_terms": 19836,
       "alternate_ids": 3964,
-      "note": "RareBench was curated against the 2023-06-06 release; this mismatch is declared in the paper."
+    
     },
    {
   "orphanet": {
@@ -45,7 +44,7 @@
     "rows": 115878,
     "release": "Orphanet Knowledge Base release of July 2026",
     "source_file_date": "2026-06-23",
-    "sha256": "REPLACE_WITH_SHA256_OF_LOCAL_EN_PRODUCT4_CSV"
+    "sha256": "3805b4391caa3569cbe5dc2b112f28403cc1364659ef3ebe526c488759719f17"
   },
   "rarebench": {
     "file": "data.zip",
@@ -86,7 +85,6 @@
         "external": 140
       },
       "device_map": "auto across both GPUs, CPU budget 0 GiB",
-      "note": "Not numerically identical to the released bfloat16 checkpoint. Attribute results to this quantised artefact."
     },
     "api_aliases": [
       {
@@ -98,7 +96,6 @@
         "run_dates_utc": [
           "2026-06-29"
         ],
-        "note": "Absent from the external arm: the free tier caps at 500 requests per day and the external arm needs 834."
       },
       {
         "alias": "mistral-small-latest",

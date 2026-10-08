@@ -36,32 +36,38 @@
       "alternate_ids": 3964,
       "note": "RareBench was curated against the 2023-06-06 release; this mismatch is declared in the paper."
     },
-    "orphanet": {
-      "file": "en_product4.csv",
-      "rows": 115878,
-      "release": "FILL IN: Orphadata release date of the file used",
-      "sha256": "FILL IN"
-    },
-    "rarebench": {
-      "file": "data.zip",
-      "subsets_used": [
-        "RAMEDIS",
-        "MME",
-        "HMS",
-        "LIRICAL"
-      ],
-      "subsets_excluded": [
-        "PUMCH_ADM"
-      ],
-      "disease_mapping_entries": 11150,
-      "source": "FILL IN: RareBench repository URL and commit sha",
-      "sha256": "FILL IN"
-    },
-    "sapbert": {
-      "model": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
-      "revision": "FILL IN: Hugging Face commit sha"
-    }
+   {
+  "orphanet": {
+    "file": "en_product4.csv",
+    "source_product": "Orphadata en_product4: HPO phenotype annotations associated with rare disorders",
+    "official_source_file": "en_product4.xml",
+    "source_url": "https://www.orphadata.com/data/xml/en_product4.xml",
+    "rows": 115878,
+    "release": "Orphanet Knowledge Base release of July 2026",
+    "source_file_date": "2026-06-23",
+    "sha256": "REPLACE_WITH_SHA256_OF_LOCAL_EN_PRODUCT4_CSV"
   },
+  "rarebench": {
+    "file": "data.zip",
+    "subsets_used": [
+      "RAMEDIS",
+      "MME",
+      "HMS",
+      "LIRICAL"
+    ],
+    "subsets_excluded": [
+      "PUMCH_ADM"
+    ],
+    "disease_mapping_entries": 11150,
+    "source": "https://huggingface.co/datasets/chenxz/RareBench/tree/6f054e04071953ef2c1779b279074245f2ab398c",
+    "revision": "6f054e04071953ef2c1779b279074245f2ab398c",
+    "sha256": "458ebbbd7b8f2975aa9c3a1773e9c1fb103563a291775b6fd5e979375ed1ab3c"
+  },
+  "sapbert": {
+    "model": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+    "revision": "090663c3ae57bf35ffe4d0d468a2a88d03051a4d"
+  }
+},
   "knowledge_base": {
     "n_disorders": 4289,
     "n_annotations": 115878
